@@ -1,3 +1,4 @@
+
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -6,7 +7,7 @@
 /*   By: pbalbino <pbalbino@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 14:24:14 by pbalbino          #+#    #+#             */
-/*   Updated: 2024/03/23 18:50:29 by pbalbino         ###   ########.fr       */
+/*   Updated: 2024/03/23 22:19:01 by pbalbino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +65,13 @@ void ClapTrap::attack(const std::string &target)
 	if (this->energy_points > 0 && this->hit_points > 0)
 	{
 		this->energy_points--; // attacking cost 1 energy point
+
+		if (this->attack_damage <= this->hit_points)
+		{
+			this->hit_points = this->hit_points - this->attack_damage;
+		}
+		else
+			this->hit_points = 0;
 
 		std::cout << "ClapTrap "
 				  << this->name

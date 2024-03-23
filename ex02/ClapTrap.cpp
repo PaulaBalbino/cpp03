@@ -6,7 +6,7 @@
 /*   By: pbalbino <pbalbino@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 14:24:14 by pbalbino          #+#    #+#             */
-/*   Updated: 2024/03/23 22:15:03 by pbalbino         ###   ########.fr       */
+/*   Updated: 2024/03/23 22:23:25 by pbalbino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,13 @@ ClapTrap::ClapTrap()
 	std::cout << "Default constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name)
+ClapTrap::ClapTrap(std::string name, unsigned int hit_point, unsigned int energy_points,
+		 unsigned int attack_damage)
 {
 	this->name = name;
-	this->hit_points = 10;
-	this->energy_points = 10;
-	this->attack_damage = 0;
+	this->hit_points = hit_point;
+	this->energy_points = energy_points;
+	this->attack_damage = attack_damage;
 
 	std::cout << "Constructor called" << std::endl;
 }
@@ -40,7 +41,7 @@ ClapTrap::ClapTrap(const ClapTrap &copy)
 	*this = copy;
 }
 
-ClapTrap& ClapTrap::operator= (const ClapTrap &copy)
+ClapTrap &ClapTrap::operator=(const ClapTrap &copy)
 {
 	std::cout << "Copy assigment constructor called" << std::endl;
 
@@ -51,7 +52,7 @@ ClapTrap& ClapTrap::operator= (const ClapTrap &copy)
 		this->energy_points = copy.energy_points;
 		this->attack_damage = copy.attack_damage;
 	}
-	return (*this); //returns the content of the updated ClapTrap instance
+	return (*this); // returns the content of the updated ClapTrap instance
 }
 ClapTrap::~ClapTrap()
 {
@@ -111,9 +112,9 @@ void ClapTrap::takeDamage(unsigned int amount)
 				  << " energy points!" << std::endl;
 	}
 	else
-		std::cout	<< "ClapTrap "
-					<< this->name
-					<< " needs an URGENT repair! Cannot take any more damage!" << std::endl;
+		std::cout << "ClapTrap "
+				  << this->name
+				  << " needs an URGENT repair! Cannot take any more damage!" << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
@@ -131,7 +132,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 				  << this->hit_points << std::endl;
 	}
 	else
-	std::cout 	<< "ClapTrap "
-				<< this->name
-				<< " can't be repaired. Energy Points is equal to 0 " << std::endl;
+		std::cout << "ClapTrap "
+				  << this->name
+				  << " can't be repaired. Energy Points is equal to 0 " << std::endl;
 }
