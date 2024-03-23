@@ -6,15 +6,15 @@
 /*   By: pbalbino <pbalbino@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 14:24:22 by pbalbino          #+#    #+#             */
-/*   Updated: 2024/03/23 18:48:06 by pbalbino         ###   ########.fr       */
+/*   Updated: 2024/03/23 18:49:58 by pbalbino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main()
 {
-	ClapTrap robot("WALL-E");
+	ScavTrap robot("WALL-E");
 	robot.attack("DeathStar");
 	robot.takeDamage(5);
 	robot.beRepaired(2);
@@ -22,6 +22,8 @@ int main()
 	robot.beRepaired(1);
 	robot.takeDamage(7);
 	robot.attack("DeathStar");
+	robot.takeDamage(200);
+	robot.takeDamage(100);
 	return (0);
 }
 
