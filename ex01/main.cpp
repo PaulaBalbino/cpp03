@@ -6,7 +6,7 @@
 /*   By: pbalbino <pbalbino@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 14:24:22 by pbalbino          #+#    #+#             */
-/*   Updated: 2024/03/23 22:36:50 by pbalbino         ###   ########.fr       */
+/*   Updated: 2024/03/24 11:57:02 by pbalbino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int main()
 	robot.beRepaired(1);
 	robot.takeDamage(7);
 	robot.attack("DeathStar");
+	robot.guardGate();
 	robot.takeDamage(200);
 	robot.takeDamage(100);
 	return (0);

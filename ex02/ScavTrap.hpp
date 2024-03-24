@@ -6,7 +6,7 @@
 /*   By: pbalbino <pbalbino@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 18:00:01 by pbalbino          #+#    #+#             */
-/*   Updated: 2024/03/23 18:11:30 by pbalbino         ###   ########.fr       */
+/*   Updated: 2024/03/23 22:32:21 by pbalbino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ public:
 	~ScavTrap();
 
 	void guardGate();
+
+	void attack(const std::string &target);
 };
 
 #endif

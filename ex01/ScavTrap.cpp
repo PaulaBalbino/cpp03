@@ -6,7 +6,7 @@
 /*   By: pbalbino <pbalbino@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 17:59:58 by pbalbino          #+#    #+#             */
-/*   Updated: 2024/03/23 22:35:18 by pbalbino         ###   ########.fr       */
+/*   Updated: 2024/03/24 11:57:48 by pbalbino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ ScavTrap::ScavTrap(const ScavTrap &copy)
 }
 ScavTrap& ScavTrap::operator = (const ScavTrap &copy)
 {
+	std::cout << "ScavTrap - Copy assigment constructor called" << std::endl;
+
 	if (this != &copy) // checks if the current instance is different than destination inst.
 	{
 		this->name = copy.name;
@@ -46,7 +48,7 @@ ScavTrap::~ScavTrap()
 	std::cout << "ScavTrap - Destructor called" << std::endl;
 }
 
-void guardGate()
+void ScavTrap::guardGate()
 {
 	std::cout << "ScavTrap is now in Gate keeper mode!" << std::endl;
 }

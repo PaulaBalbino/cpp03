@@ -6,7 +6,7 @@
 /*   By: pbalbino <pbalbino@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 17:59:58 by pbalbino          #+#    #+#             */
-/*   Updated: 2024/03/23 18:42:22 by pbalbino         ###   ########.fr       */
+/*   Updated: 2024/03/24 11:44:13 by pbalbino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,12 @@ ScavTrap::ScavTrap(const ScavTrap &copy)
 	std::cout << "ScavTrap - Copy constructor called" << std::endl;
 
 	*this = copy;
-
 }
+
 ScavTrap& ScavTrap::operator = (const ScavTrap &copy)
 {
+	std::cout << "ScavTrap - Copy assigment constructor called" << std::endl;
+
 	if (this != &copy) // checks if the current instance is different than destination inst.
 	{
 		this->name = copy.name;
@@ -49,4 +51,35 @@ ScavTrap::~ScavTrap()
 void guardGate()
 {
 	std::cout << "ScavTrap is now in Gate keeper mode!" << std::endl;
+}
+
+void ScavTrap::attack(const std::string &target)
+{
+	if (this->energy_points > 0 && this->hit_points > 0)
+	{
+		this->energy_points--;
+
+		if (this->attack_damage <= this->hit_points)
+		{
+			this->hit_points = this->hit_points - this->attack_damage;
+		}
+		else
+			this->hit_points = 0;
+
+		std::cout << "ScavTrap "
+				  << this->name
+				  << " attacks "
+				  << target
+				  << "!!! Causing "
+				  << this->attack_damage
+				  << " points of damage!" << std::endl;
+	}
+	else if (hit_points <= 0)
+	{
+		std::cout << "ClapTrap does not have enough hit points to attack! Oh no!" << std::endl;
+	}
+	else
+	{
+		std::cout << "ClapTrap does not have enough energy points to attack! Oh no!" << std::endl;
+	}
 }

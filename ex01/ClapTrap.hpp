@@ -6,7 +6,7 @@
 /*   By: pbalbino <pbalbino@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 14:24:19 by pbalbino          #+#    #+#             */
-/*   Updated: 2024/03/23 21:50:00 by pbalbino         ###   ########.fr       */
+/*   Updated: 2024/03/23 22:46:51 by pbalbino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ public:
 		unsigned int attack_damage);
 	ClapTrap(const ClapTrap &copy);
 	ClapTrap& operator = (const ClapTrap &copy);
-	~ClapTrap();
+	virtual ~ClapTrap();
 
 	void attack(const std::string& target);
 	void takeDamage(unsigned int amount);
