@@ -6,7 +6,7 @@
 /*   By: pbalbino <pbalbino@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 18:54:07 by pbalbino          #+#    #+#             */
-/*   Updated: 2024/03/24 12:03:51 by pbalbino         ###   ########.fr       */
+/*   Updated: 2024/03/24 12:35:51 by pbalbino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 FragTrap::FragTrap() : ClapTrap("R2D2", 100, 100, 30)
 {
-	std::cout << "FragTrap - Constructor called" << std::endl;
+	std::cout << "FragTrap - Default constructor called" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name, 100, 100, 30)

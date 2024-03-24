@@ -6,7 +6,7 @@
 /*   By: pbalbino <pbalbino@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 14:24:19 by pbalbino          #+#    #+#             */
-/*   Updated: 2024/03/23 16:48:23 by pbalbino         ###   ########.fr       */
+/*   Updated: 2024/03/24 12:29:49 by pbalbino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,6 @@ private:
 	unsigned int hit_points;
 	unsigned int energy_points;
 	unsigned int attack_damage;
-
-
-/*
- private attributes
-• Name, which is passed as parameter to a constructor
-• Hit points (10), represent the health of the ClapTrap
-• Energy points (10)
-• Attack damage (0)
-*/
 
 public:
 	ClapTrap();

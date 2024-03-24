@@ -6,7 +6,7 @@
 /*   By: pbalbino <pbalbino@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 17:59:58 by pbalbino          #+#    #+#             */
-/*   Updated: 2024/03/24 11:57:48 by pbalbino         ###   ########.fr       */
+/*   Updated: 2024/03/24 12:34:11 by pbalbino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ ScavTrap::ScavTrap(const ScavTrap &copy)
 	std::cout << "ScavTrap - Copy constructor called" << std::endl;
 
 	*this = copy;
-
 }
+
 ScavTrap& ScavTrap::operator = (const ScavTrap &copy)
 {
 	std::cout << "ScavTrap - Copy assigment constructor called" << std::endl;
@@ -46,11 +46,6 @@ ScavTrap& ScavTrap::operator = (const ScavTrap &copy)
 ScavTrap::~ScavTrap()
 {
 	std::cout << "ScavTrap - Destructor called" << std::endl;
-}
-
-void ScavTrap::guardGate()
-{
-	std::cout << "ScavTrap is now in Gate keeper mode!" << std::endl;
 }
 
 void ScavTrap::attack(const std::string &target)
@@ -82,4 +77,8 @@ void ScavTrap::attack(const std::string &target)
 	{
 		std::cout << "ClapTrap does not have enough energy points to attack! Oh no!" << std::endl;
 	}
+}
+void ScavTrap::guardGate()
+{
+	std::cout << "ScavTrap is now in Gate keeper mode!" << std::endl;
 }
