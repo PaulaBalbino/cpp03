@@ -78,7 +78,7 @@ void ClapTrap::attack(const std::string &target)
 				  << " attacks "
 				  << target
 				  << "!!! Causing "
-				  << this->hit_points
+				  << this->attack_damage
 				  << " points of damage!" << std::endl;
 	}
 	else if (hit_points <= 0)
